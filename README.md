@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" alt="FrontierSmith Logo" width="300"/>
+  <img src="assets/logo.png" alt="FrontierSmith Logo" width="200"/>
 </p>
 
 <h1 align="center">FrontierSmith</h1>
