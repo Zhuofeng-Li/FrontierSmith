@@ -1,6 +1,8 @@
 <p align="center">
-  <h1 align="center">FrontierSmith</h1>
+  <img src="assets/logo.png" alt="FrontierSmith Logo" width="300"/>
 </p>
+
+<h1 align="center">FrontierSmith</h1>
 
 <h3 align="center">
 Synthetic Open-ended Problem Generation
