@@ -51,20 +51,20 @@ FrontierSmith/
 
 ## Synthetic Problems
 
-10 problems in `Frontier-CS/algorithmic/problems/`:
+10 problems in `Frontier-CS/algorithmic/problems/`. These correspond to problems **306–315** in the [Frontier-CS main repository](https://github.com/FrontierCS/Frontier-CS):
 
-| ID | Name |
-|:---|:-----|
-| `frontiersmith_1` | Scorched Bridges Campaign |
-| `frontiersmith_2` | Farmwide Teleport Pad Deployment |
-| `frontiersmith_3` | Metallic Pink Resonator Layout |
-| `frontiersmith_4` | Park Ranger Shift Balancing |
-| `frontiersmith_5` | Prime Resonance Retuning |
-| `frontiersmith_6` | Mobile Relay Layout |
-| `frontiersmith_7` | Archipelago Relay Network Design |
-| `frontiersmith_8` | Resonant Bay Layout |
-| `frontiersmith_9` | Duff's Defensive Lineup |
-| `frontiersmith_10` | Quadratic Witness Packing |
+| ID | Frontier-CS ID | Name |
+|:---|:---------------|:-----|
+| `frontiersmith_1` | 306 | Scorched Bridges Campaign |
+| `frontiersmith_2` | 307 | Farmwide Teleport Pad Deployment |
+| `frontiersmith_3` | 308 | Metallic Pink Resonator Layout |
+| `frontiersmith_4` | 309 | Park Ranger Shift Balancing |
+| `frontiersmith_5` | 310 | Prime Resonance Retuning |
+| `frontiersmith_6` | 311 | Mobile Relay Layout |
+| `frontiersmith_7` | 312 | Archipelago Relay Network Design |
+| `frontiersmith_8` | 313 | Resonant Bay Layout |
+| `frontiersmith_9` | 314 | Duff's Defensive Lineup |
+| `frontiersmith_10` | 315 | Quadratic Witness Packing |
 
 Each directory contains:
 
