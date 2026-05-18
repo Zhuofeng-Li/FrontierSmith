@@ -9,11 +9,15 @@ Synthetic Open-ended Problem Generation
 </h3>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2605.14445"><img src="https://img.shields.io/badge/arXiv-2605.14445-b31b1b?logo=arxiv&logoColor=white" alt="arXiv"></a>
+  <a href="https://frontier-cs.org/blog/frontiersmith"><img src="https://img.shields.io/badge/Blog-frontier--cs.org-1f6feb" alt="Blog"></a>
+  <a href="https://huggingface.co/runyuanhe/qwen35-9b-frontiersmith"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow" alt="HuggingFace Model"></a>
   <a href="https://github.com/FrontierCS/Frontier-CS"><img src="https://img.shields.io/badge/Frontier--CS-Official_Repo-blue?logo=github" alt="Frontier-CS"></a>
   <img src="https://img.shields.io/badge/Synthetic_Problems-10-green" alt="Synthetic Problems">
   <img src="https://img.shields.io/badge/Python-3.11+-yellow?logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Docker-24+-2496ED?logo=docker&logoColor=white" alt="Docker">
 </p>
+
 
 ---
 
@@ -71,7 +75,7 @@ FrontierSmith/
 Each directory contains:
 
 ```
-chk.cc           # custom checker (testlib, prints "Ratio: <float>")
+chk.cc           # custom checker
 config.yaml      # judge configuration
 gen.cpp          # testlib-style test-case generator
 statement.txt    # problem statement
