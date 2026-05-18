@@ -293,12 +293,12 @@ bash scripts/run_verl_inference_from_model.sh
 python scripts/merge_fsdp_to_hf.py --ckpt-dir <...> --output-dir <...>
 ```
 
-### Plotting & Diagnostics
-
-```bash
-python scripts/plot_frontiercs_validation.py
-python scripts/plot_loss_reward_frontiercs.py
-python scripts/plot_training_loss.py
-python scripts/parse_frontiercs_val_metrics.py
-python scripts/compute_numeric_problem_scores.py
+### Citing Us
+```
+@article{he2026frontiersmith,
+  title={FrontierSmith: Synthesizing Open-Ended Coding Problems at Scale},
+  author={He, Runyuan and Mang, Qiuyang and Zhou, Shang and Liu, Kaiyuan and Li, Hanchen and Mao, Huanzhi and Zhang, Qizheng and Li, Zerui and Peng, Bo and Cheng, Lufeng and others},
+  journal={arXiv preprint arXiv:2605.14445},
+  year={2026}
+}
 ```
