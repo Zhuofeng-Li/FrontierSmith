@@ -129,6 +129,72 @@ The exact 200-problem manifest is at `data/sample_lists/hardtest_hard_sampled_20
 
 The 30-problem mixed sample list (10 from each of HardTest, Frontier-CS, synthetic) is at `data/sample_lists/harbor_sample_30.jsonl`.
 
+### Harbor + Claude Code Reproduction
+
+The 10 FrontierSmith problems can be loaded into a local Harbor dataset with
+the bundled Frontier-CS algorithm adapter, then run with Harbor's standard
+`claude-code` agent.
+
+Prerequisites:
+
+- Docker Desktop or another Docker daemon reachable by the current user.
+- `uv` and the Harbor CLI (`uv tool install harbor`, or `pip install harbor`).
+- A Claude Code compatible Anthropic key exported as `ANTHROPIC_API_KEY`.
+- If your machine needs a proxy, configure both the shell and Docker Desktop
+  for it, for example `http://127.0.0.1:7897`.
+
+Load the FrontierSmith tasks:
+
+```bash
+export FRONTIERSMITH_ROOT="$(pwd)"
+export FRONTIER_CS_ALGORITHMIC_PATH="$FRONTIERSMITH_ROOT/Frontier-CS/algorithmic"
+
+cd "$FRONTIERSMITH_ROOT/harbor/adapters/frontier-cs-algorithm"
+uv sync
+uv run frontier-cs-algorithm \
+  --source "$FRONTIERSMITH_ROOT/Frontier-CS" \
+  --output-dir "$FRONTIERSMITH_ROOT/datasets/frontiersmith-sample" \
+  --include-non-numeric \
+  --task-ids \
+    frontiersmith_1 frontiersmith_2 frontiersmith_3 frontiersmith_4 frontiersmith_5 \
+    frontiersmith_6 frontiersmith_7 frontiersmith_8 frontiersmith_9 frontiersmith_10 \
+  --overwrite
+cd "$FRONTIERSMITH_ROOT"
+```
+
+This creates 10 Harbor task directories under
+`datasets/frontiersmith-sample/frontier-cs-algorithm-frontiersmith_*`.
+
+Run a smoke test with Claude Code on one task:
+
+```bash
+harbor run \
+  -p datasets/frontiersmith-sample \
+  -a claude-code \
+  -m anthropic/claude-opus-4-6 \
+  -l 1 \
+  -n 1 \
+  --jobs-dir jobs/frontiersmith-claude-smoke \
+  --yes
+```
+
+Run all 10 tasks:
+
+```bash
+harbor run \
+  -p datasets/frontiersmith-sample \
+  -a claude-code \
+  -m anthropic/claude-opus-4-6 \
+  -n 1 \
+  --jobs-dir jobs/frontiersmith-claude \
+  --yes
+```
+
+Results are written under the selected `jobs/` directory. Each task expects
+the agent to write `/app/solution.cpp`; the verifier posts that solution to
+the Frontier-CS judge sidecar and records the reward in
+`reward.txt` / `reward.json`.
+
 ### ALE-Bench (validation only)
 
 ```bash

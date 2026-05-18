@@ -174,7 +174,7 @@ class FrontierCSAdapter:
         self._write_task_config(task_paths, problem)
 
         LOGGER.info(
-            "  [OK] %d (%s, %s)", problem.problem_id, problem.problem_type, problem.tag
+            "  [OK] %s (%s, %s)", problem.problem_id, problem.problem_type, problem.tag
         )
         return task_paths.task_dir
 
