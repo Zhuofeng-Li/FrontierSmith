@@ -19,9 +19,8 @@ Synthetic Open-ended Problem Generation
 </p>
 
 <p align="center">
-  <video src="assets/frontier_smith.mp4" controls width="720" muted>
+  <video src="https://github.com/FrontierCS/FrontierSmith/raw/main/assets/frontier_smith.mp4" controls width="720" muted>
     Your browser does not support the video tag.
-    <a href="assets/frontier_smith.mp4">Download the demo video</a>.
   </video>
 </p>
 
